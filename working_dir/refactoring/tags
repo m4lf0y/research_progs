@@ -1,0 +1,475 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Alpha	m2_rssi.py	/^Alpha = -49$/;"	v
+Alpha	m3_rssi.py	/^Alpha = -49$/;"	v
+Alpha	m3_rssi_we.py	/^Alpha = -49$/;"	v
+Alpha	m3_rssi_we2.py	/^Alpha = -49$/;"	v
+Alpha	plot_ave.py	/^Alpha = -45$/;"	v
+Alpha	plot_ave2.py	/^Alpha = 0$/;"	v
+Alpha	plot_ideal.py	/^    Alpha = r1.x[0]$/;"	v
+Alpha	plot_ideal.py	/^Alpha = -45$/;"	v
+Alpha	plot_ideal2.py	/^Alpha = 0$/;"	v
+Alpha	plot_rssi.py	/^Alpha = -45$/;"	v
+Alpha	plot_rssi2.py	/^    Alpha = r1.x[0]$/;"	v
+Alpha	plot_rssi2.py	/^Alpha = -45$/;"	v
+Alpha	plot_rssi2_2.py	/^    Alpha = r1.x[0]$/;"	v
+Alpha	plot_rssi2_2.py	/^Alpha = -45$/;"	v
+Alpha2	plot_ideal2.py	/^Alpha2 = 0$/;"	v
+Alpha3	plot_ideal2.py	/^Alpha3 = 0$/;"	v
+Alpha4	plot_ideal2.py	/^Alpha4 = 0$/;"	v
+Beta	m2_rssi.py	/^Beta = 2 # at the time of estimate Alpha.$/;"	v
+Beta	m3_rssi.py	/^Beta = 0 # at the time of estimate Alpha.$/;"	v
+Beta	m3_rssi_we.py	/^Beta = 0 # at the time of estimate Alpha.$/;"	v
+Beta	m3_rssi_we2.py	/^Beta = 0 # at the time of estimate Alpha.$/;"	v
+Beta	plot_ave.py	/^Beta = 2$/;"	v
+Beta	plot_ave2.py	/^Beta = 0$/;"	v
+Beta	plot_ideal.py	/^    Beta = r1.x[1]$/;"	v
+Beta	plot_ideal.py	/^Beta = 2$/;"	v
+Beta	plot_ideal2.py	/^Beta = 0$/;"	v
+Beta	plot_rssi.py	/^Beta = 2$/;"	v
+Beta	plot_rssi2.py	/^    Beta = r1.x[1]$/;"	v
+Beta	plot_rssi2.py	/^Beta = 2$/;"	v
+Beta	plot_rssi2_2.py	/^    Beta = r1.x[1]$/;"	v
+Beta	plot_rssi2_2.py	/^Beta = 2$/;"	v
+Beta2	plot_ideal2.py	/^Beta2 = 0$/;"	v
+Beta3	plot_ideal2.py	/^Beta3 = 0$/;"	v
+Beta4	plot_ideal2.py	/^Beta4 = 0$/;"	v
+ave	plot_ave.py	/^def ave():$/;"	f
+ave	plot_ideal.py	/^def ave():$/;"	f
+ave	plot_rssi.py	/^def ave():$/;"	f
+ave	plot_rssi2.py	/^def ave():$/;"	f
+ave	plot_rssi2_2.py	/^def ave():$/;"	f
+ave_rssi	plot_ave.py	/^ave_rssi = np.array([])$/;"	v
+ave_rssi	plot_ideal.py	/^ave_rssi = np.array([])$/;"	v
+ave_rssi	plot_rssi.py	/^ave_rssi = np.array([])$/;"	v
+ave_rssi	plot_rssi2.py	/^ave_rssi = np.array([])$/;"	v
+ave_rssi	plot_rssi2_2.py	/^ave_rssi = np.array([])$/;"	v
+convert_int	m2_rssi.py	/^def convert_int():$/;"	f
+convert_int	m3_rssi.py	/^def convert_int():$/;"	f
+convert_int	m3_rssi_we.py	/^def convert_int():$/;"	f
+convert_int	m3_rssi_we2.py	/^def convert_int():$/;"	f
+convert_int	output2.py	/^def convert_int():$/;"	f
+convert_int	plot_ave.py	/^def convert_int():$/;"	f
+convert_int	plot_ideal.py	/^def convert_int():$/;"	f
+convert_int	plot_rssi.py	/^def convert_int():$/;"	f
+convert_int	plot_rssi2.py	/^def convert_int():$/;"	f
+convert_int	plot_rssi2_2.py	/^def convert_int():$/;"	f
+countN	m3_rssi.py	/^countN = 0$/;"	v
+countN	m3_rssi_we.py	/^countN = 0$/;"	v
+countN	m3_rssi_we2.py	/^countN = 0$/;"	v
+data	output2.py	/^        data = line.split()$/;"	v
+dbm_to_mw	m2_rssi.py	/^def  dbm_to_mw(value):$/;"	f
+dbm_to_mw	m3_rssi_we.py	/^def  dbm_to_mw(value):$/;"	f
+devtext	m2_rssi.py	/^devtext = 'device\/4_dev9.rim'$/;"	v
+devtext	m3_rssi.py	/^devtext = 'device\/116_devB4.rim'$/;"	v
+devtext	m3_rssi_we.py	/^devtext = 'device\/116_devA4_2.rim'$/;"	v
+devtext	m3_rssi_we2.py	/^devtext = 'device\/116_devB4_2.rim'$/;"	v
+devtext	plot_rssi.py	/^devtext = 'device\/8_dev1.rim'$/;"	v
+devtext_to_list	m2_rssi.py	/^def devtext_to_list(): #Text(dev00.rim) to np.array$/;"	f
+devtext_to_list	m3_rssi.py	/^def devtext_to_list(): #Text(dev00.rim) to np.array$/;"	f
+devtext_to_list	m3_rssi_we.py	/^def devtext_to_list(): #Text(dev00.rim) to np.array$/;"	f
+devtext_to_list	m3_rssi_we2.py	/^def devtext_to_list(): #Text(dev00.rim) to np.array$/;"	f
+devtext_to_list	plot_ave.py	/^def devtext_to_list(devtext): #Text(dev00.rim) to np.array$/;"	f
+devtext_to_list	plot_ideal.py	/^def devtext_to_list(devtext): #Text(dev00.rim) to np.array$/;"	f
+devtext_to_list	plot_rssi.py	/^def devtext_to_list(): #Text(dev00.rim) to np.array$/;"	f
+devtext_to_list	plot_rssi2.py	/^def devtext_to_list(devtext): #Text(dev00.rim) to np.array$/;"	f
+devtext_to_list	plot_rssi2_2.py	/^def devtext_to_list(devtext): #Text(dev00.rim) to np.array$/;"	f
+devtext_to_list_ave	m2_rssi.py	/^def devtext_to_list_ave(): #Text(dev00.rim) to np.array (average velue of each square)$/;"	f
+devtext_to_list_ave	m3_rssi.py	/^def devtext_to_list_ave(): #Text(dev00.rim) to np.array (average velue of each square)$/;"	f
+devtext_to_list_ave	m3_rssi_we.py	/^def devtext_to_list_ave(): #Text(dev00.rim) to np.array (average velue of each square)$/;"	f
+devtext_to_list_ave	m3_rssi_we2.py	/^def devtext_to_list_ave(): #Text(dev00.rim) to np.array (average velue of each square)$/;"	f
+devtext_to_list_ave	output2.py	/^def devtext_to_list_ave(): #Text(dev00.rim) to np.array (average velue of each square)$/;"	f
+devtext_to_list_max	m2_rssi.py	/^def devtext_to_list_max(): #Text(dev00.rim) to np.array (maximum velue of each square)$/;"	f
+devtext_to_list_max	m3_rssi.py	/^def devtext_to_list_max(): #Text(dev00.rim) to np.array (maximum velue of each square)$/;"	f
+devtext_to_list_max	m3_rssi_we.py	/^def devtext_to_list_max(): #Text(dev00.rim) to np.array (maximum velue of each square)$/;"	f
+devtext_to_list_max	m3_rssi_we2.py	/^def devtext_to_list_max(): #Text(dev00.rim) to np.array (maximum velue of each square)$/;"	f
+devtext_to_list_max	output2.py	/^def devtext_to_list_max(): #Text(dev00.rim) to np.array (maximum velue of each square)$/;"	f
+devtext_to_list_max	plot_ave.py	/^def devtext_to_list_max(): #Text(dev00.rim) to np.array (maximum velue of each square)$/;"	f
+devtext_to_list_max	plot_ideal.py	/^def devtext_to_list_max(): #Text(dev00.rim) to np.array (maximum velue of each square)$/;"	f
+devtext_to_list_max	plot_rssi.py	/^def devtext_to_list_max(): #Text(dev00.rim) to np.array (maximum velue of each square)$/;"	f
+devtext_to_list_max	plot_rssi2.py	/^def devtext_to_list_max(): #Text(dev00.rim) to np.array (maximum velue of each square)$/;"	f
+devtext_to_list_max	plot_rssi2_2.py	/^def devtext_to_list_max(): #Text(dev00.rim) to np.array (maximum velue of each square)$/;"	f
+devtext_to_list_med	m2_rssi.py	/^def devtext_to_list_med(): #Text(dev00.rim) to np.array (median velue of each square)$/;"	f
+devtext_to_list_med	m3_rssi.py	/^def devtext_to_list_med(): #Text(dev00.rim) to np.array (median velue of each square)$/;"	f
+devtext_to_list_med	m3_rssi_we.py	/^def devtext_to_list_med(): #Text(dev00.rim) to np.array (median velue of each square)$/;"	f
+devtext_to_list_med	m3_rssi_we2.py	/^def devtext_to_list_med(): #Text(dev00.rim) to np.array (median velue of each square)$/;"	f
+devtext_to_list_med	output2.py	/^def devtext_to_list_med(): #Text(dev00.rim) to np.array (median velue of each square)$/;"	f
+devtext_to_list_med	plot_ave.py	/^def devtext_to_list_med(): #Text(dev00.rim) to np.array (median velue of each square)$/;"	f
+devtext_to_list_med	plot_ideal.py	/^def devtext_to_list_med(): #Text(dev00.rim) to np.array (median velue of each square)$/;"	f
+devtext_to_list_med	plot_rssi.py	/^def devtext_to_list_med(): #Text(dev00.rim) to np.array (median velue of each square)$/;"	f
+devtext_to_list_med	plot_rssi2.py	/^def devtext_to_list_med(): #Text(dev00.rim) to np.array (median velue of each square)$/;"	f
+devtext_to_list_med	plot_rssi2_2.py	/^def devtext_to_list_med(): #Text(dev00.rim) to np.array (median velue of each square)$/;"	f
+devtext_to_list_min	m2_rssi.py	/^def devtext_to_list_min(): #Text(dev00.rim) to np.array (minimum velue of each square)$/;"	f
+devtext_to_list_min	m3_rssi.py	/^def devtext_to_list_min(): #Text(dev00.rim) to np.array (minimum velue of each square)$/;"	f
+devtext_to_list_min	m3_rssi_we.py	/^def devtext_to_list_min(): #Text(dev00.rim) to np.array (minimum velue of each square)$/;"	f
+devtext_to_list_min	m3_rssi_we2.py	/^def devtext_to_list_min(): #Text(dev00.rim) to np.array (minimum velue of each square)$/;"	f
+devtext_to_list_min	output2.py	/^def devtext_to_list_min(): #Text(dev00.rim) to np.array (minimum velue of each square)$/;"	f
+devtext_to_list_min	plot_ave.py	/^def devtext_to_list_min(): #Text(dev00.rim) to np.array (minimum velue of each square)$/;"	f
+devtext_to_list_min	plot_ideal.py	/^def devtext_to_list_min(): #Text(dev00.rim) to np.array (minimum velue of each square)$/;"	f
+devtext_to_list_min	plot_rssi.py	/^def devtext_to_list_min(): #Text(dev00.rim) to np.array (minimum velue of each square)$/;"	f
+devtext_to_list_min	plot_rssi2.py	/^def devtext_to_list_min(): #Text(dev00.rim) to np.array (minimum velue of each square)$/;"	f
+devtext_to_list_min	plot_rssi2_2.py	/^def devtext_to_list_min(): #Text(dev00.rim) to np.array (minimum velue of each square)$/;"	f
+devtext_to_list_sevhig	m2_rssi.py	/^def devtext_to_list_sevhig():$/;"	f
+devtext_to_list_sevhig	m3_rssi.py	/^def devtext_to_list_sevhig():$/;"	f
+devtext_to_list_sevhig	m3_rssi_we.py	/^def devtext_to_list_sevhig():$/;"	f
+devtext_to_list_sevhig	m3_rssi_we2.py	/^def devtext_to_list_sevhig():$/;"	f
+devtext_to_list_sevhig	output2.py	/^def devtext_to_list_sevhig():$/;"	f
+dic	plot_ave.py	/^    dic = list(set(dic))$/;"	v
+dic	plot_ave.py	/^dic = []$/;"	v
+dic1	plot_ave.py	/^dic1 = {}$/;"	v
+dis	plot_ave2.py	/^    dis = np.array([])$/;"	v
+dis	plot_ave2.py	/^dis = np.array([])$/;"	v
+dis	plot_ideal2.py	/^    dis = np.array([])$/;"	v
+dis	plot_ideal2.py	/^dis = np.array([])$/;"	v
+dis2	plot_ideal2.py	/^dis2 = np.array([])$/;"	v
+dis3	plot_ideal2.py	/^dis3 = np.array([])$/;"	v
+dis4	plot_ideal2.py	/^dis4 = np.array([])$/;"	v
+dis_5	plot_ave.py	/^def dis_5():$/;"	f
+dis_5	plot_ideal.py	/^def dis_5():$/;"	f
+dis_5	plot_rssi.py	/^def dis_5():$/;"	f
+dis_5	plot_rssi2.py	/^def dis_5():$/;"	f
+dis_5	plot_rssi2_2.py	/^def dis_5():$/;"	f
+dis_two_points	m2_rssi.py	/^def dis_two_points(x1,y1,x2,y2):       #Return the distance between the two points$/;"	f
+dis_two_points	m3_rssi.py	/^def dis_two_points(x1,y1,x2,y2):       #Return the distance between the two points$/;"	f
+dis_two_points	m3_rssi_we.py	/^def dis_two_points(x1,y1,x2,y2):       #Return the distance between the two points$/;"	f
+dis_two_points	m3_rssi_we2.py	/^def dis_two_points(x1,y1,x2,y2):       #Return the distance between the two points$/;"	f
+dis_two_points	output2.py	/^def dis_two_points(x1,y1,x2,y2):       #Return the distance between the two points$/;"	f
+dis_two_points	plot_ave.py	/^def dis_two_points(x1,y1,x2,y2):       #Return the distance between the two points$/;"	f
+dis_two_points	plot_ideal.py	/^def dis_two_points(x1,y1,x2,y2):       #Return the distance between the two points$/;"	f
+dis_two_points	plot_rssi.py	/^def dis_two_points(x1,y1,x2,y2):       #Return the distance between the two points$/;"	f
+dis_two_points	plot_rssi2.py	/^def dis_two_points(x1,y1,x2,y2):       #Return the distance between the two points$/;"	f
+dis_two_points	plot_rssi2_2.py	/^def dis_two_points(x1,y1,x2,y2):       #Return the distance between the two points$/;"	f
+distance	m2_rssi.py	/^distance = np.array([])$/;"	v
+distance	m3_rssi.py	/^distance = np.array([])$/;"	v
+distance	m3_rssi_we.py	/^distance = np.array([])$/;"	v
+distance	m3_rssi_we2.py	/^distance = np.array([])$/;"	v
+distance	plot_ave.py	/^distance = np.array([])$/;"	v
+distance	plot_ideal.py	/^    distance = np.unique(distance)$/;"	v
+distance	plot_ideal.py	/^distance = np.array([])$/;"	v
+distance	plot_rssi.py	/^distance = np.array([])$/;"	v
+distance	plot_rssi2.py	/^distance = np.array([])$/;"	v
+distance	plot_rssi2_2.py	/^distance = np.array([])$/;"	v
+error1	output2.py	/^error1 = []$/;"	v
+error2	output2.py	/^error2 = []$/;"	v
+est_ab	m2_rssi.py	/^def est_ab(parameter,x,rssi):$/;"	f
+est_ab	m3_rssi.py	/^def est_ab(parameter,x,rssi):$/;"	f
+est_ab	m3_rssi_we.py	/^def est_ab(parameter,x,rssi):$/;"	f
+est_ab	m3_rssi_we2.py	/^def est_ab(parameter,x,rssi):$/;"	f
+est_ab	output2.py	/^def est_ab(parameter,x,rssi):$/;"	f
+est_ab	plot_ave.py	/^def est_ab(parameter,x,rssi):$/;"	f
+est_ab	plot_ideal.py	/^def est_ab(parameter,x,rssi):$/;"	f
+est_ab	plot_rssi.py	/^def est_ab(parameter,x,rssi):$/;"	f
+est_ab	plot_rssi2.py	/^def est_ab(parameter,x,rssi):$/;"	f
+est_ab	plot_rssi2_2.py	/^def est_ab(parameter,x,rssi):$/;"	f
+est_xy	m2_rssi.py	/^def est_xy(parameter,rssi,x,y):     #leastsq's function Estimate target of x,y$/;"	f
+est_xy	m3_rssi.py	/^def est_xy(parameter,rssi,x,y):     #leastsq's function Estimate target of x,y$/;"	f
+est_xy	m3_rssi_we.py	/^def est_xy(parameter,rssi,x,y):     #leastsq's function Estimate target of x,y$/;"	f
+est_xy	m3_rssi_we2.py	/^def est_xy(parameter,rssi,x,y):     #leastsq's function Estimate target of x,y$/;"	f
+est_xy	output2.py	/^def est_xy(parameter,rssi,x,y):     #leastsq's function Estimate target of x,y$/;"	f
+est_xy	plot_ave.py	/^def est_xy(parameter,rssi,x,y):     #leastsq's function Estimate target of x,y$/;"	f
+est_xy	plot_ideal.py	/^def est_xy(parameter,rssi,x,y):     #leastsq's function Estimate target of x,y$/;"	f
+est_xy	plot_rssi.py	/^def est_xy(parameter,rssi,x,y):     #leastsq's function Estimate target of x,y$/;"	f
+est_xy	plot_rssi2.py	/^def est_xy(parameter,rssi,x,y):     #leastsq's function Estimate target of x,y$/;"	f
+est_xy	plot_rssi2_2.py	/^def est_xy(parameter,rssi,x,y):     #leastsq's function Estimate target of x,y$/;"	f
+est_xyab	m2_rssi.py	/^def est_xyab(parameter,rssi,x,y):   #leastsq's function Estimate target of x,y and Alpha,Beta$/;"	f
+est_xyab	m3_rssi.py	/^def est_xyab(parameter,rssi,x,y):   #leastsq's function Estimate target of x,y and Alpha,Beta$/;"	f
+est_xyab	m3_rssi_we.py	/^def est_xyab(parameter,rssi,x,y):   #leastsq's function Estimate target of x,y and Alpha,Beta$/;"	f
+est_xyab	m3_rssi_we2.py	/^def est_xyab(parameter,rssi,x,y):   #leastsq's function Estimate target of x,y and Alpha,Beta$/;"	f
+est_xyab	output2.py	/^def est_xyab(parameter,rssi,x,y):   #leastsq's function Estimate target of x,y and Alpha,Beta$/;"	f
+est_xyab	plot_ave.py	/^def est_xyab(parameter,rssi,x,y):   #leastsq's function Estimate target of x,y and Alpha,Beta$/;"	f
+est_xyab	plot_ideal.py	/^def est_xyab(parameter,rssi,x,y):   #leastsq's function Estimate target of x,y and Alpha,Beta$/;"	f
+est_xyab	plot_rssi.py	/^def est_xyab(parameter,rssi,x,y):   #leastsq's function Estimate target of x,y and Alpha,Beta$/;"	f
+est_xyab	plot_rssi2.py	/^def est_xyab(parameter,rssi,x,y):   #leastsq's function Estimate target of x,y and Alpha,Beta$/;"	f
+est_xyab	plot_rssi2_2.py	/^def est_xyab(parameter,rssi,x,y):   #leastsq's function Estimate target of x,y and Alpha,Beta$/;"	f
+est_xyab2	m2_rssi.py	/^def est_xyab2(parameter,rssi,x,y,rssimw):$/;"	f
+est_xyb	m2_rssi.py	/^def est_xyb(parameter,rssi,x,y):      #leastsq's function  Estimate target of x,y and Beta$/;"	f
+est_xyb	m3_rssi.py	/^def est_xyb(parameter,rssi,x,y):      #leastsq's function  Estimate target of x,y and Beta$/;"	f
+est_xyb	m3_rssi_we.py	/^def est_xyb(parameter,rssi,x,y,rssimw):      #leastsq's function  Estimate target of x,y and Beta$/;"	f
+est_xyb	m3_rssi_we2.py	/^def est_xyb(parameter,rssi,x,y,rssimw):      #leastsq's function  Estimate target of x,y and Beta$/;"	f
+est_xyb	output2.py	/^def est_xyb(parameter,rssi,x,y):      #leastsq's function  Estimate target of x,y and Beta$/;"	f
+est_xyb	plot_ave.py	/^def est_xyb(parameter,rssi,x,y):      #leastsq's function  Estimate target of x,y and Beta$/;"	f
+est_xyb	plot_ideal.py	/^def est_xyb(parameter,rssi,x,y):      #leastsq's function  Estimate target of x,y and Beta$/;"	f
+est_xyb	plot_rssi.py	/^def est_xyb(parameter,rssi,x,y):      #leastsq's function  Estimate target of x,y and Beta$/;"	f
+est_xyb	plot_rssi2.py	/^def est_xyb(parameter,rssi,x,y):      #leastsq's function  Estimate target of x,y and Beta$/;"	f
+est_xyb	plot_rssi2_2.py	/^def est_xyb(parameter,rssi,x,y):      #leastsq's function  Estimate target of x,y and Beta$/;"	f
+est_xyb2	m2_rssi.py	/^def est_xyb2(parameter,rssi,x,y,rssimw):$/;"	f
+func	m2_rssi.py	/^def func(parameter,x,y):$/;"	f
+func	m3_rssi.py	/^def func(parameter,x,y):$/;"	f
+func	m3_rssi_we.py	/^def func(parameter,x,y):$/;"	f
+func	m3_rssi_we2.py	/^def func(parameter,x,y):$/;"	f
+func	output2.py	/^def func(parameter,x,y):$/;"	f
+func	plot_ave.py	/^def func(parameter,x,y):$/;"	f
+func	plot_ideal.py	/^def func(parameter,x,y):$/;"	f
+func	plot_rssi.py	/^def func(parameter,x,y):$/;"	f
+func	plot_rssi2.py	/^def func(parameter,x,y):$/;"	f
+func	plot_rssi2_2.py	/^def func(parameter,x,y):$/;"	f
+func2	m2_rssi.py	/^def func2(parameter,x,y):$/;"	f
+func2	m3_rssi.py	/^def func2(parameter,x,y):$/;"	f
+func2	m3_rssi_we.py	/^def func2(parameter,x,y):$/;"	f
+func2	m3_rssi_we2.py	/^def func2(parameter,x,y):$/;"	f
+func2	output2.py	/^def func2(parameter,x,y):$/;"	f
+func2	plot_ave.py	/^def func2(parameter,x,y):$/;"	f
+func2	plot_ideal.py	/^def func2(parameter,x,y):$/;"	f
+func2	plot_rssi.py	/^def func2(parameter,x,y):$/;"	f
+func2	plot_rssi2.py	/^def func2(parameter,x,y):$/;"	f
+func2	plot_rssi2_2.py	/^def func2(parameter,x,y):$/;"	f
+func3	m2_rssi.py	/^def func3(parameter,x,y):$/;"	f
+func3	m3_rssi.py	/^def func3(parameter,x,y):$/;"	f
+func3	m3_rssi_we.py	/^def func3(parameter,x,y):$/;"	f
+func3	m3_rssi_we2.py	/^def func3(parameter,x,y):$/;"	f
+func3	output2.py	/^def func3(parameter,x,y):$/;"	f
+func3	plot_ave.py	/^def func3(parameter,x,y):$/;"	f
+func3	plot_ideal.py	/^def func3(parameter,x,y):$/;"	f
+func3	plot_rssi.py	/^def func3(parameter,x,y):$/;"	f
+func3	plot_rssi2.py	/^def func3(parameter,x,y):$/;"	f
+func3	plot_rssi2_2.py	/^def func3(parameter,x,y):$/;"	f
+funcab2	m2_rssi.py	/^def funcab2(parameter,x,y):$/;"	f
+gps_to_xy	m2_rssi.py	/^def gps_to_xy(lon,lat): #Convert the GPSs to xy$/;"	f
+gps_to_xy	m3_rssi.py	/^def gps_to_xy(lon,lat): #Convert the GPSs to xy$/;"	f
+gps_to_xy	m3_rssi_we.py	/^def gps_to_xy(lon,lat): #Convert the GPSs to xy$/;"	f
+gps_to_xy	m3_rssi_we2.py	/^def gps_to_xy(lon,lat): #Convert the GPSs to xy$/;"	f
+gps_to_xy	output2.py	/^def gps_to_xy(lon,lat): #Convert the GPSs to xy$/;"	f
+gps_to_xy	plot_ave.py	/^def gps_to_xy(lon,lat): #Convert the GPSs to xy$/;"	f
+gps_to_xy	plot_ideal.py	/^def gps_to_xy(lon,lat): #Convert the GPSs to xy$/;"	f
+gps_to_xy	plot_rssi.py	/^def gps_to_xy(lon,lat): #Convert the GPSs to xy$/;"	f
+gps_to_xy	plot_rssi2.py	/^def gps_to_xy(lon,lat): #Convert the GPSs to xy$/;"	f
+gps_to_xy	plot_rssi2_2.py	/^def gps_to_xy(lon,lat): #Convert the GPSs to xy$/;"	f
+initialValue	plot_ideal.py	/^    initialValue = np.array([-55,2])$/;"	v
+initialValue	plot_rssi2.py	/^    initialValue = np.array([-55,2])$/;"	v
+initialValue	plot_rssi2_2.py	/^    initialValue = np.array([-55,2])$/;"	v
+max_rssi	plot_ave.py	/^max_rssi = np.array([])$/;"	v
+max_rssi	plot_ideal.py	/^max_rssi = np.array([])$/;"	v
+max_rssi	plot_rssi2.py	/^max_rssi = np.array([])$/;"	v
+max_rssi	plot_rssi2_2.py	/^max_rssi = np.array([])$/;"	v
+maxrssi	m2_rssi.py	/^maxrssi = 0$/;"	v
+maxrssi	m3_rssi_we.py	/^maxrssi = 0$/;"	v
+maxrssi	m3_rssi_we2.py	/^maxrssi=0$/;"	v
+num1	output2.py	/^        num1 = 0$/;"	v
+numrssi	output2.py	/^numrssi = []$/;"	v
+plot	m2_rssi.py	/^def plot(est_x,est_y): $/;"	f
+plot	m3_rssi.py	/^def plot(est_x,est_y): $/;"	f
+plot	m3_rssi_we.py	/^def plot(est_x,est_y): $/;"	f
+plot	m3_rssi_we2.py	/^def plot(est_x,est_y): $/;"	f
+plot	output2.py	/^def plot(est_x,est_y): $/;"	f
+plot	plot_ave.py	/^def plot(est_x,est_y): $/;"	f
+plot	plot_ideal.py	/^def plot(est_x,est_y): $/;"	f
+plot	plot_rssi.py	/^def plot(est_x,est_y): $/;"	f
+plot	plot_rssi2.py	/^def plot(est_x,est_y): $/;"	f
+plot	plot_rssi2_2.py	/^def plot(est_x,est_y): $/;"	f
+plot_rssi	plot_ave.py	/^def plot_rssi():$/;"	f
+plot_rssi	plot_ideal.py	/^def plot_rssi():$/;"	f
+plot_rssi	plot_rssi.py	/^def plot_rssi():$/;"	f
+plot_rssi	plot_rssi2.py	/^def plot_rssi():$/;"	f
+plot_rssi	plot_rssi2_2.py	/^def plot_rssi():$/;"	f
+r1	plot_ideal.py	/^    r1 = optimize.least_squares(est_ab,initialValue,bounds=([-60,1.5],[-35,4]),args=(distance,rssi))$/;"	v
+r1	plot_rssi2.py	/^    r1 = optimize.least_squares(est_ab,initialValue,bounds=([-60,1.5],[-35,4]),args=(distance,rssi))$/;"	v
+r1	plot_rssi2_2.py	/^    r1 = optimize.least_squares(est_ab,initialValue,bounds=([-60,2],[-35,4]),args=(distance,rssi))$/;"	v
+rim_lat_y	m2_rssi.py	/^rim_lat_y = np.array([])$/;"	v
+rim_lat_y	m3_rssi.py	/^rim_lat_y = np.array([])$/;"	v
+rim_lat_y	m3_rssi_we.py	/^rim_lat_y = np.array([])$/;"	v
+rim_lat_y	m3_rssi_we2.py	/^rim_lat_y = np.array([])$/;"	v
+rim_lat_y	plot_ave.py	/^rim_lat_y = np.array([])$/;"	v
+rim_lat_y	plot_ideal.py	/^rim_lat_y = np.array([])$/;"	v
+rim_lat_y	plot_rssi.py	/^rim_lat_y = np.array([])$/;"	v
+rim_lat_y	plot_rssi2.py	/^rim_lat_y = np.array([])$/;"	v
+rim_lat_y	plot_rssi2_2.py	/^rim_lat_y = np.array([])$/;"	v
+rim_lon_x	m2_rssi.py	/^rim_lon_x = np.array([])$/;"	v
+rim_lon_x	m3_rssi.py	/^rim_lon_x = np.array([])$/;"	v
+rim_lon_x	m3_rssi_we.py	/^rim_lon_x = np.array([])$/;"	v
+rim_lon_x	m3_rssi_we2.py	/^rim_lon_x = np.array([])$/;"	v
+rim_lon_x	plot_ave.py	/^rim_lon_x = np.array([])$/;"	v
+rim_lon_x	plot_ideal.py	/^rim_lon_x = np.array([])$/;"	v
+rim_lon_x	plot_rssi.py	/^rim_lon_x = np.array([])$/;"	v
+rim_lon_x	plot_rssi2.py	/^rim_lon_x = np.array([])$/;"	v
+rim_lon_x	plot_rssi2_2.py	/^rim_lon_x = np.array([])$/;"	v
+rssi	m2_rssi.py	/^rssi = np.array([])$/;"	v
+rssi	m3_rssi.py	/^rssi = np.array([])$/;"	v
+rssi	m3_rssi_we.py	/^rssi = np.array([])$/;"	v
+rssi	m3_rssi_we2.py	/^rssi = np.array([])$/;"	v
+rssi	plot_ave.py	/^rssi = np.array([])$/;"	v
+rssi	plot_ave2.py	/^    rssi = np.array([])$/;"	v
+rssi	plot_ave2.py	/^rssi = np.array([])$/;"	v
+rssi	plot_ideal.py	/^rssi = np.array([])$/;"	v
+rssi	plot_rssi.py	/^rssi = np.array([])$/;"	v
+rssi	plot_rssi2.py	/^rssi = np.array([])$/;"	v
+rssi	plot_rssi2_2.py	/^rssi = np.array([])$/;"	v
+rssimw	m2_rssi.py	/^rssimw = np.array([])$/;"	v
+rssmax	plot_ave.py	/^def rssmax():$/;"	f
+rssmax	plot_ideal.py	/^def rssmax():$/;"	f
+rssmax	plot_rssi2.py	/^def rssmax():$/;"	f
+rssmax	plot_rssi2_2.py	/^def rssmax():$/;"	f
+sevhig	m2_rssi.py	/^sevhig = []$/;"	v
+sevhig	m3_rssi.py	/^sevhig = []$/;"	v
+sevhig	m3_rssi_we.py	/^sevhig = []$/;"	v
+sevhig	m3_rssi_we2.py	/^sevhig = []$/;"	v
+sum1	output2.py	/^        sum1 = 0$/;"	v
+sum2	output2.py	/^        sum2 = 0$/;"	v
+target_lat	m2_rssi.py	/^target_lat = 37.525295 #4_dev8.rim 5_dev15.rim$/;"	v
+target_lat	m2_rssi.py	/^target_lat = 37.525308 #1_dev34.rim 1_dev16.rim$/;"	v
+target_lat	m2_rssi.py	/^target_lat = 37.525355 #4_dev9.rim 5_dev16.rim$/;"	v
+target_lat	m3_rssi.py	/^target_lat = 37.525275 #1_dev33.rim$/;"	v
+target_lat	m3_rssi.py	/^target_lat = 37.525295 #4_dev8.rim 5_dev15.rim$/;"	v
+target_lat	m3_rssi.py	/^target_lat = 37.525295 #67_dev2.rim$/;"	v
+target_lat	m3_rssi.py	/^target_lat = 37.525308 #1_dev34.rim 1_dev16.rim$/;"	v
+target_lat	m3_rssi.py	/^target_lat = 37.525310 #116_devA4.rim 116_devB4.rim 116_devA4_2.rim 116_devB4_2.rim$/;"	v
+target_lat	m3_rssi_we.py	/^target_lat = 37.525275 #1_dev33.rim$/;"	v
+target_lat	m3_rssi_we.py	/^target_lat = 37.525295 #4_dev8.rim 5_dev15.rim$/;"	v
+target_lat	m3_rssi_we.py	/^target_lat = 37.525295 #67_dev2.rim$/;"	v
+target_lat	m3_rssi_we.py	/^target_lat = 37.525308 #1_dev34.rim 1_dev16.rim$/;"	v
+target_lat	m3_rssi_we.py	/^target_lat = 37.525310 #116_devA4.rim 116_devB4.rim 116_devA4_2.rim 116_devB4_2.rim$/;"	v
+target_lat	m3_rssi_we2.py	/^target_lat = 37.525275 #1_dev33.rim$/;"	v
+target_lat	m3_rssi_we2.py	/^target_lat = 37.525295 #4_dev8.rim 5_dev15.rim$/;"	v
+target_lat	m3_rssi_we2.py	/^target_lat = 37.525295 #67_dev2.rim$/;"	v
+target_lat	m3_rssi_we2.py	/^target_lat = 37.525308 #1_dev34.rim 1_dev16.rim$/;"	v
+target_lat	m3_rssi_we2.py	/^target_lat = 37.525310 #116_devA4.rim 116_devB4.rim 116_devA4_2.rim 116_devB4_2.rim$/;"	v
+target_lat	plot_ave.py	/^target_lat = 37.525171 #m_dev44.rim$/;"	v
+target_lat	plot_ideal.py	/^target_lat = 37.525171 #m_dev44.rim$/;"	v
+target_lat	plot_rssi.py	/^target_lat = 37.525471 #8_dev1$/;"	v
+target_lat	plot_rssi2.py	/^target_lat = 37.525171 #m_dev44.rim$/;"	v
+target_lat10	plot_ave.py	/^target_lat10 = 37.525522 #8_dev2.rim$/;"	v
+target_lat11	plot_ave.py	/^target_lat11 = 37.525471 #8_dev1.rim$/;"	v
+target_lat2	plot_ave.py	/^target_lat2 = 37.525308 #1_dev34.rim 1_dev16.rim(Ouchi)$/;"	v
+target_lat2	plot_ideal.py	/^target_lat2 = 37.525308 #1_dev34.rim 1_dev16.rim(Ouchi)$/;"	v
+target_lat2	plot_rssi2.py	/^target_lat2 = 37.525308 #1_dev34.rim 1_dev16.rim(Ouchi)$/;"	v
+target_lat2	plot_rssi2_2.py	/^target_lat2 = 37.525275 #1_dev33.rim$/;"	v
+target_lat3	plot_ave.py	/^target_lat3 = 37.525382 #2_dev23.rim$/;"	v
+target_lat3	plot_ideal.py	/^target_lat3 = 37.525382 #2_dev23.rim$/;"	v
+target_lat3	plot_rssi2.py	/^target_lat3 = 37.525382 #2_dev23.rim$/;"	v
+target_lat4	plot_ave.py	/^target_lat4 = 37.525295 #4_dev8.rim 5_dev15.rim$/;"	v
+target_lat4	plot_ideal.py	/^target_lat4 = 37.525295 #4_dev8.rim 5_dev15.rim$/;"	v
+target_lat4	plot_rssi2.py	/^target_lat4 = 37.525295 #4_dev8.rim 5_dev15.rim$/;"	v
+target_lat4	plot_rssi2_2.py	/^target_lat4 = 37.525355 #4_dev9.rim 5_dev16.rim$/;"	v
+target_lat5	plot_ave.py	/^target_lat5 = 37.525304 #6_dev1.rim 7_dev1.rim$/;"	v
+target_lat5	plot_ideal.py	/^target_lat5 = 37.525304 #6_dev1.rim 7_dev1.rim$/;"	v
+target_lat5	plot_rssi2.py	/^target_lat5 = 37.525304 #6_dev1.rim 7_dev1.rim$/;"	v
+target_lat5	plot_rssi2_2.py	/^target_lat5 = 37.525310 # 6,7_dev_1.rim$/;"	v
+target_lat6	plot_ave.py	/^target_lat6 = 37.525275 #6_dev1.rim 7_dev1.rim$/;"	v
+target_lat6	plot_ideal.py	/^target_lat6 = 37.525275 #6_dev1.rim 7_dev1.rim$/;"	v
+target_lat7	plot_ave.py	/^target_lat7 = 37.525355 #6_dev1.rim 7_dev1.rim$/;"	v
+target_lat7	plot_ideal.py	/^target_lat7 = 37.525355 #6_dev1.rim 7_dev1.rim$/;"	v
+target_lat8	plot_ave.py	/^target_lat8 = 37.525304 #6_dev1.rim 7_dev1.rim$/;"	v
+target_lat8	plot_ideal.py	/^target_lat8 = 37.525304 #6_dev1.rim 7_dev1.rim$/;"	v
+target_lat9	plot_ave.py	/^target_lat9 = 37.525310 #6_dev1.rim 7_dev1.rim$/;"	v
+target_lat9	plot_ideal.py	/^target_lat9 = 37.525310 #6_dev1.rim 7_dev1.rim$/;"	v
+target_lat_y	m2_rssi.py	/^target_lat_y = 0$/;"	v
+target_lat_y	m3_rssi.py	/^target_lat_y = 0$/;"	v
+target_lat_y	m3_rssi_we.py	/^target_lat_y = 0$/;"	v
+target_lat_y	m3_rssi_we2.py	/^target_lat_y = 0$/;"	v
+target_lat_y	plot_ave.py	/^target_lat_y = 0$/;"	v
+target_lat_y	plot_ideal.py	/^target_lat_y = 0$/;"	v
+target_lat_y	plot_rssi.py	/^target_lat_y = 0$/;"	v
+target_lat_y	plot_rssi2.py	/^target_lat_y = 0$/;"	v
+target_lat_y	plot_rssi2_2.py	/^target_lat_y = 0$/;"	v
+target_lon	m2_rssi.py	/^target_lon = 139.937960$/;"	v
+target_lon	m2_rssi.py	/^target_lon = 139.938932$/;"	v
+target_lon	m2_rssi.py	/^target_lon = 139.938999$/;"	v
+target_lon	m3_rssi.py	/^target_lon = 139.937839$/;"	v
+target_lon	m3_rssi.py	/^target_lon = 139.937851$/;"	v
+target_lon	m3_rssi.py	/^target_lon = 139.937960$/;"	v
+target_lon	m3_rssi.py	/^target_lon = 139.938999$/;"	v
+target_lon	m3_rssi.py	/^target_lon = 139.939094$/;"	v
+target_lon	m3_rssi_we.py	/^target_lon = 139.937839$/;"	v
+target_lon	m3_rssi_we.py	/^target_lon = 139.937851$/;"	v
+target_lon	m3_rssi_we.py	/^target_lon = 139.937960$/;"	v
+target_lon	m3_rssi_we.py	/^target_lon = 139.938999$/;"	v
+target_lon	m3_rssi_we.py	/^target_lon = 139.939094$/;"	v
+target_lon	m3_rssi_we2.py	/^target_lon = 139.937839$/;"	v
+target_lon	m3_rssi_we2.py	/^target_lon = 139.937851$/;"	v
+target_lon	m3_rssi_we2.py	/^target_lon = 139.937960$/;"	v
+target_lon	m3_rssi_we2.py	/^target_lon = 139.938999$/;"	v
+target_lon	m3_rssi_we2.py	/^target_lon = 139.939094$/;"	v
+target_lon	plot_ave.py	/^target_lon = 139.938322$/;"	v
+target_lon	plot_ideal.py	/^target_lon = 139.938322$/;"	v
+target_lon	plot_rssi.py	/^target_lon = 139.939047$/;"	v
+target_lon	plot_rssi2.py	/^target_lon = 139.938322$/;"	v
+target_lon10	plot_ave.py	/^target_lon10 = 139.939111$/;"	v
+target_lon11	plot_ave.py	/^target_lon11 = 139.939047$/;"	v
+target_lon2	plot_ave.py	/^target_lon2 = 139.937960$/;"	v
+target_lon2	plot_ideal.py	/^target_lon2 = 139.937960$/;"	v
+target_lon2	plot_rssi2.py	/^target_lon2 = 139.937960$/;"	v
+target_lon2	plot_rssi2_2.py	/^target_lon2 = 139.937851$/;"	v
+target_lon3	plot_ave.py	/^target_lon3 = 139.937911$/;"	v
+target_lon3	plot_ideal.py	/^target_lon3 = 139.937911$/;"	v
+target_lon3	plot_rssi2.py	/^target_lon3 = 139.937911$/;"	v
+target_lon4	plot_ave.py	/^target_lon4 = 139.938999$/;"	v
+target_lon4	plot_ideal.py	/^target_lon4 = 139.938999$/;"	v
+target_lon4	plot_rssi2.py	/^target_lon4 = 139.938999$/;"	v
+target_lon4	plot_rssi2_2.py	/^target_lon4 = 139.938932$/;"	v
+target_lon5	plot_ave.py	/^target_lon5 = 139.939094$/;"	v
+target_lon5	plot_ideal.py	/^target_lon5 = 139.939094$/;"	v
+target_lon5	plot_rssi2.py	/^target_lon5 = 139.939094$/;"	v
+target_lon5	plot_rssi2_2.py	/^target_lon5 = 139.939045$/;"	v
+target_lon6	plot_ave.py	/^target_lon6 = 139.937851$/;"	v
+target_lon6	plot_ideal.py	/^target_lon6 = 139.937851$/;"	v
+target_lon7	plot_ave.py	/^target_lon7 = 139.938932$/;"	v
+target_lon7	plot_ideal.py	/^target_lon7 = 139.938932$/;"	v
+target_lon8	plot_ave.py	/^target_lon8 = 139.939094$/;"	v
+target_lon8	plot_ideal.py	/^target_lon8 = 139.939094$/;"	v
+target_lon9	plot_ave.py	/^target_lon9 = 139.939045$/;"	v
+target_lon9	plot_ideal.py	/^target_lon9 = 139.939045$/;"	v
+target_lon_x	m2_rssi.py	/^target_lon_x = 0$/;"	v
+target_lon_x	m3_rssi.py	/^target_lon_x = 0$/;"	v
+target_lon_x	m3_rssi_we.py	/^target_lon_x = 0$/;"	v
+target_lon_x	m3_rssi_we2.py	/^target_lon_x = 0$/;"	v
+target_lon_x	plot_ave.py	/^target_lon_x = 0$/;"	v
+target_lon_x	plot_ideal.py	/^target_lon_x = 0$/;"	v
+target_lon_x	plot_rssi.py	/^target_lon_x = 0$/;"	v
+target_lon_x	plot_rssi2.py	/^target_lon_x = 0$/;"	v
+target_lon_x	plot_rssi2_2.py	/^target_lon_x = 0$/;"	v
+target_to_xy	m2_rssi.py	/^def target_to_xy():     #Convert the target of x and y to x-xmin and y-ymin$/;"	f
+target_to_xy	m3_rssi.py	/^def target_to_xy():     #Convert the target of x and y to x-xmin and y-ymin$/;"	f
+target_to_xy	m3_rssi_we.py	/^def target_to_xy():     #Convert the target of x and y to x-xmin and y-ymin$/;"	f
+target_to_xy	m3_rssi_we2.py	/^def target_to_xy():     #Convert the target of x and y to x-xmin and y-ymin$/;"	f
+target_to_xy	output2.py	/^def target_to_xy():     #Convert the target of x and y to x-xmin and y-ymin$/;"	f
+target_to_xy	plot_ave.py	/^def target_to_xy(lon,lat):     #Convert the target of x and y to x-xmin and y-ymin$/;"	f
+target_to_xy	plot_ideal.py	/^def target_to_xy(lon,lat):     #Convert the target of x and y to x-xmin and y-ymin$/;"	f
+target_to_xy	plot_rssi.py	/^def target_to_xy():     #Convert the target of x and y to x-xmin and y-ymin$/;"	f
+target_to_xy	plot_rssi2.py	/^def target_to_xy(lon,lat):     #Convert the target of x and y to x-xmin and y-ymin$/;"	f
+target_to_xy	plot_rssi2_2.py	/^def target_to_xy(lon,lat):     #Convert the target of x and y to x-xmin and y-ymin$/;"	f
+text_to_list1	plot_ave2.py	/^def text_to_list1(devtext):$/;"	f
+text_to_list1	plot_ideal2.py	/^def text_to_list1(devtext):$/;"	f
+tmp0	output2.py	/^    tmp0 = []$/;"	v
+tmp1	output2.py	/^    tmp1 = []$/;"	v
+tmp2	output2.py	/^    tmp2 = []$/;"	v
+txt1	plot_ave2.py	/^txt1 = "ave\/ave14.txt"$/;"	v
+txt1	plot_ideal2.py	/^txt1 = "ideal\/ideal1.txt"$/;"	v
+txt2	plot_ave2.py	/^txt2 = "ave\/ave2.txt"$/;"	v
+txt2	plot_ideal2.py	/^txt2 = "ideal\/ideal2.txt"$/;"	v
+txt3	plot_ave2.py	/^txt3 = "ave\/ave3.txt"$/;"	v
+txt3	plot_ideal2.py	/^txt3 = "ideal\/ideal3.txt"$/;"	v
+txt4	plot_ave2.py	/^txt4 = "ave\/ave4.txt"$/;"	v
+txt4	plot_ideal2.py	/^txt4 = "ideal\/ideal4.txt"$/;"	v
+xmin	m2_rssi.py	/^xmin = 0$/;"	v
+xmin	m3_rssi.py	/^xmin = 0$/;"	v
+xmin	m3_rssi_we.py	/^xmin = 0$/;"	v
+xmin	m3_rssi_we2.py	/^xmin = 0$/;"	v
+xmin	plot_ave.py	/^xmin = 0$/;"	v
+xmin	plot_ideal.py	/^xmin = 0$/;"	v
+xmin	plot_rssi.py	/^xmin = 0$/;"	v
+xmin	plot_rssi2.py	/^xmin = 0$/;"	v
+xmin	plot_rssi2_2.py	/^xmin = 0$/;"	v
+xy_to_1	m2_rssi.py	/^def xy_to_1():      #Convert the minimum of x and y to 1$/;"	f
+xy_to_1	m3_rssi.py	/^def xy_to_1():      #Convert the minimum of x and y to 1$/;"	f
+xy_to_1	m3_rssi_we.py	/^def xy_to_1():      #Convert the minimum of x and y to 1$/;"	f
+xy_to_1	m3_rssi_we2.py	/^def xy_to_1():      #Convert the minimum of x and y to 1$/;"	f
+xy_to_1	output2.py	/^def xy_to_1():      #Convert the minimum of x and y to 1$/;"	f
+xy_to_1	plot_ave.py	/^def xy_to_1():      #Convert the minimum of x and y to 1$/;"	f
+xy_to_1	plot_ideal.py	/^def xy_to_1():      #Convert the minimum of x and y to 1$/;"	f
+xy_to_1	plot_rssi.py	/^def xy_to_1():      #Convert the minimum of x and y to 1$/;"	f
+xy_to_1	plot_rssi2.py	/^def xy_to_1():      #Convert the minimum of x and y to 1$/;"	f
+xy_to_1	plot_rssi2_2.py	/^def xy_to_1():      #Convert the minimum of x and y to 1$/;"	f
+ymin	m2_rssi.py	/^ymin = 0$/;"	v
+ymin	m3_rssi.py	/^ymin = 0$/;"	v
+ymin	m3_rssi_we.py	/^ymin = 0$/;"	v
+ymin	m3_rssi_we2.py	/^ymin = 0$/;"	v
+ymin	plot_ave.py	/^ymin = 0$/;"	v
+ymin	plot_ideal.py	/^ymin = 0$/;"	v
+ymin	plot_rssi.py	/^ymin = 0$/;"	v
+ymin	plot_rssi2.py	/^ymin = 0$/;"	v
+ymin	plot_rssi2_2.py	/^ymin = 0$/;"	v
+yplot	plot_ideal2.py	/^    yplot = np.array([])$/;"	v
+yplot	plot_ideal2.py	/^yplot = np.array([])$/;"	v
