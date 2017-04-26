@@ -67,15 +67,20 @@ def animate_latlon(i):
             rs.append(rssi)
     ax2.clear()
 
+#    print(xs80-float(x))
 
-    ax2.scatter(angle_between(0,0,xs40-float(x),ys40-float(y)), distance_between(0,0,xs40-float(x),ys40-float(y)), c = 'r', marker = 'o', alpha = 0.5, label = '-49 ~ -40')
-    ax2.scatter(angle_between(0,0,xs50-float(x),ys50-float(y)), distance_between(0,0,xs50-float(x),ys50-float(y)), c = 'g', marker = '^', alpha = 0.4, label = '-59 ~ -50')
-    ax2.scatter(angle_between(0,0,xs60-float(x),ys60-float(y)), distance_between(0,0,xs60-float(x),ys60-float(y)), c = 'c', marker = '^', alpha = 0.3, label = '-69 ~ -60')
-    ax2.scatter(angle_between(0,0,xs70-float(x),ys70-float(y)), distance_between(0,0,xs70-float(x),ys70-float(y)), c = 'm', marker = 's', alpha = 0.2, label = '-79 ~ -70')
-    ax2.scatter(angle_between(0,0,xs80-float(x),ys80-float(y)), distance_between(0,0,xs80-float(x),ys80-float(y)), c = 'y', marker = '.', alpha = 0.1, label = '-89 ~ -80')
-    ax2.scatter(angle_between(0,0,xs90-float(x),ys90-float(y)), distance_between(0,0,xs90-float(x),ys80-float(y)), c = 'y', marker = '.', alpha = 0.1, label = '-99 ~ -90')
+    print(distance_between(0,0,xs70-float(x),ys70-float(y)))
+
+    ax2.scatter(angle_between(float(x),float(y),xs40,ys40), distance_between(0,0,xs40-float(x),ys40-float(y)), c = 'r', marker = 'o', alpha = 0.5, label = '-49 ~ -40')
+    ax2.scatter(angle_between(float(x),float(y),xs50,ys50), distance_between(0,0,xs50-float(x),ys50-float(y)), c = 'g', marker = '^', alpha = 0.4, label = '-59 ~ -50')
+    ax2.scatter(angle_between(float(x),float(y),xs60,ys60), distance_between(0,0,xs60-float(x),ys60-float(y)), c = 'c', marker = '^', alpha = 0.3, label = '-69 ~ -60')
+    ax2.scatter(angle_between(float(x),float(y),xs70,ys70), distance_between(0,0,xs70-float(x),ys70-float(y)), c = 'm', marker = 's', alpha = 0.2, label = '-79 ~ -70')
+    ax2.scatter(angle_between(float(x),float(y),xs80,ys80), distance_between(0,0,xs80-float(x),ys80-float(y)), c = 'y', marker = '.', alpha = 0.1, label = '-89 ~ -80')
+    ax2.scatter(angle_between(float(x),float(y),xs90,ys90), distance_between(0,0,xs90-float(x),ys80-float(y)), c = 'y', marker = '.', alpha = 0.1, label = '-99 ~ -90')
 
 #    ax2.scatter(x, y, c = 'k',s = 80,marker = '*', alpha = 1, label = 'current position')
+#    ax2.set_ylim(-100,100)
+#    ax2.set_xlim(-100,100)
 
     ax2.legend()
 style.use('fivethirtyeight')
@@ -83,6 +88,8 @@ style.use('fivethirtyeight')
 fig = plt.figure()
 
 ax2 = fig.add_subplot(1,1,1,projection='polar')
+ax2.set_ylim(100,100)
+ax2.set_xlim(100,100)
 ani= animation.FuncAnimation(fig, animate_latlon, interval=1000)
 
 plt.legend()
