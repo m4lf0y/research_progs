@@ -86,8 +86,8 @@ def animate_latlon(i):
     if est_x and est_y:
         ax2.scatter(est_x,est_y,c = 'b', marker = 'o', alpha = 0.5, s = 100, label = 'estimated position')
 
-    ax2.set_ylim(-100,100)
-    ax2.set_xlim(-100,100)
+    ax2.set_ylim(-50,50)
+    ax2.set_xlim(-50,50)
 #    ax2.scatter(x, y, c = 'k',s = 80,marker = '*', alpha = 1, label = 'current position')
 
     ax2.legend()
@@ -96,8 +96,6 @@ style.use('fivethirtyeight')
 fig = plt.figure()
 
 ax2 = fig.add_subplot(1,1,1)
-ax2.set_ylim(-100,100)
-ax2.set_xlim(-100,100)
 ani= animation.FuncAnimation(fig, animate_latlon, interval=1000)
 
 plt.legend()

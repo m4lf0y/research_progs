@@ -10,19 +10,10 @@
 #include "radiotap-parser.h" 
 #include "ieee80211_radiotap.h"
 #include "byteorder.h"
-#include <sqlite3.h>
-#include <limits.h>
 
 int a=0;
 #define BAUDRATE B4800
 #define MODEMDEVICE "/dev/ttyUSB0"
-
-//DB
-int ret=0,err;
-sqlite3 *conn=NULL;
-char *err_msg=NULL;
-char sql_str[127];
-double dblat=0,dblon=0;
 
 /* Frame */
 struct wi_frame {
@@ -61,7 +52,6 @@ int pnmea(char *buf,FILE *pFile) {
   time_t timer;
   struct tm *date;
   char str[256];
-
 
   /*
     GPSレシーバから、GPRMC形式のデータを解析
@@ -150,20 +140,16 @@ int pnmea(char *buf,FILE *pFile) {
   if (ns=='N'){
     fprintf(pFile,"N:%lf ",gps_lat);
     printf("N:%lf ",gps_lat);
-    dblat=gps_lat;
   } else if (ns=='S'){
     fprintf(pFile,"S:%lf ",gps_lat);
     printf("S:%lf ",gps_lat);
-    dblat=gps_lat;
   }
   if (ew=='E'){
     fprintf(pFile,"- E:%lf / ",gps_lon);
     printf("- E:%lf / ",gps_lon);
-    dblon=gps_lon;
   } else if (ns=='W'){
     fprintf(pFile,"- W:%lf ",gps_lon);
     printf("- W:%lf ",gps_lon);
-    dblon=gps_lon;
   }
   return 1;
 
@@ -173,7 +159,7 @@ int pnmea(char *buf,FILE *pFile) {
 void packet_process(u_char *cnt, const struct pcap_pkthdr* pkthdr, const u_char* packet)
 {
   
-  int k=6,next_arg_index=0,status,tmp;
+  int k=6,next_arg_index=0,status;
   int *counter=(int *) cnt;
   int8_t rssi=0;
   struct ieee80211_radiotap_header *rh=(struct ieee80211_radiotap_header *)packet;
@@ -187,16 +173,7 @@ void packet_process(u_char *cnt, const struct pcap_pkthdr* pkthdr, const u_char*
   int j=0;
   struct termios oldtio, newtio;
   unsigned char buf[512];
-
-  char macadr[24];
-  char slat[16];
-  char slon[16];
-  char tmpstr[3];
-  char sql[128];
-  char *zErrMsg;
-
-  memset(macadr,0,sizeof(macadr));
-
+  
   // 出力ファイル
   pFile=fopen("output.txt","a");
   
@@ -229,9 +206,6 @@ void packet_process(u_char *cnt, const struct pcap_pkthdr* pkthdr, const u_char*
     }
   }
 
-  snprintf(slat,12,"%.6f",dblat);
-  snprintf(slon,14,"%.6f",dblon);
-
   printf("MAC address:");
   fprintf(pFile,"MAC address:");
   
@@ -243,24 +217,10 @@ void packet_process(u_char *cnt, const struct pcap_pkthdr* pkthdr, const u_char*
   do{
     fprintf(pFile,"%s%02X",(k==6)?" ":":",*ptr);
     printf("%s%02X",(k==6)?" ":":",*ptr);
-    if(j==17-3*k)strncat(macadr,":",1);
-        if(k==6){
-            tmp = *ptr;
-            sprintf(tmpstr,"%02X",tmp);
-            strncat(macadr,tmpstr,2);
-            //strncat(sql_macadr,tmpstr,2);
-            j+=2;
-        }else{
-            tmp = *ptr;
-            sprintf(tmpstr,"%02X",tmp);
-            strncat(macadr,tmpstr,2);
-           // strncat(sql_macadr,tmpstr,2);
-            j+=3;
-        }
     ptr++;
   } while(--k>0);
-
-// Parse radiotap header until getting the RSSI
+  
+  // Parse radiotap header until getting the RSSI
   do{
     next_arg_index=ieee80211_radiotap_iterator_next(&iterator);
     if(iterator.this_arg_index==IEEE80211_RADIOTAP_DBM_ANTSIGNAL){
@@ -283,70 +243,8 @@ void packet_process(u_char *cnt, const struct pcap_pkthdr* pkthdr, const u_char*
   tcsetattr(fd, TCSANOW, &oldtio); 
   close(fd);
 
-  snprintf(sql,sizeof(sql),"create table [%s](mac_adr text,longitude text,latitude text,rssi int,created_at text)",macadr);
-  int rc = sqlite3_exec(conn,sql, 0, 0, &zErrMsg);
-
-  printf("%s\n",sql);
-
-  //DB ADD
-  sqlite3_stmt* stmt;
-
-  snprintf(sql,sizeof(sql),"INSERT INTO [%s] values(?,?,?,?,?);",macadr);
-  printf("%s\n",sql);
-
-  err = sqlite3_prepare_v2(
-          conn,
-          sql,
-          -1,
-          &stmt,
-          NULL);
-  sqlite3_bind_text(stmt,1,macadr,-1,SQLITE_TRANSIENT);
-  sqlite3_bind_text(stmt,2,slon,-1,SQLITE_TRANSIENT);
-  sqlite3_bind_text(stmt,3,slat,-1,SQLITE_TRANSIENT);
-  sqlite3_bind_int(stmt,4,rssi);
-  sqlite3_bind_text(stmt,5,print_packet_time(packet,*pkthdr),-1,SQLITE_TRANSIENT);
-
-  while(1){
-        ret = sqlite3_step(stmt);
-        //printf("%d\n",ret);
-        if(ret==SQLITE_BUSY){
-            continue;
-        }else if(ret==SQLITE_DONE){
-            break;
-        }
-  }
-
-  sqlite3_finalize(stmt);
-  ret = sqlite3_exec(conn,"commit,",NULL,NULL,NULL);
-
-  snprintf(sql,sizeof(sql),"INSERT INTO [alldata] values(?,?,?,?,?);");
-  err = sqlite3_prepare_v2(
-          conn,
-          sql,
-          -1,
-          &stmt,
-          NULL);
-  sqlite3_bind_text(stmt,1,macadr,-1,SQLITE_TRANSIENT);
-  sqlite3_bind_text(stmt,2,slon,-1,SQLITE_TRANSIENT);
-  sqlite3_bind_text(stmt,3,slat,-1,SQLITE_TRANSIENT);
-  sqlite3_bind_int(stmt,4,rssi);
-  sqlite3_bind_text(stmt,5,print_packet_time(packet,*pkthdr),-1,SQLITE_TRANSIENT);
-
-  while(1){
-        ret = sqlite3_step(stmt);
-        if(ret==SQLITE_BUSY){
-            continue;
-        }else if(ret==SQLITE_DONE){
-            break;
-        }
-  }
-
-  sqlite3_finalize(stmt);
-  ret = sqlite3_exec(conn,"commit,",NULL,NULL,NULL);
-
-
   return;
-
+  
 }
 
 int main(int argc,char *argv[]){
@@ -363,18 +261,6 @@ int main(int argc,char *argv[]){
   
   struct pcap_pkthdr header;
   const u_char *packet;
-
-  memset(&sql_str[0],0x00,sizeof(sql_str));
-
-  //DB access
-  ret = sqlite3_open(
-         "../db/./rssi.sqlite3",
-         &conn
-         );
-  if(SQLITE_OK!=ret){
-    //error
-    exit(-1);
-  }
   
   init_file(); // initialize the output file
   
