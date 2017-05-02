@@ -13,7 +13,8 @@
 
 int a=0;
 #define BAUDRATE B4800
-#define MODEMDEVICE "/dev/ttyUSB0"
+//#define MODEMDEVICE "/dev/ttyUSB0"
+#define MODEMDEVICE "/dev/tty.usbserial"
 
 /* Frame */
 struct wi_frame {
