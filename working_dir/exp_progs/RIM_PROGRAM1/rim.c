@@ -12,11 +12,9 @@
 #include "byteorder.h"
 
 int a=0;
+double slat = 0, slon = 0;
 #define BAUDRATE B4800
 #define MODEMDEVICE "/dev/ttyUSB0"
-//#define MODEMDEVICE "/dev/tty.usbserial"
-
-double slat=0, slon=0;
 
 /* Frame */
 struct wi_frame {
@@ -31,6 +29,8 @@ struct wi_frame {
 };
 
 char* print_packet_time(const u_char *packet, struct pcap_pkthdr packet_header){
+
+  //return ("\n    Time: %s \n",ctime((const time_t*)&packet_header.ts.tv_sec));
   return ("\n    Time: %s \n",ctime((const time_t*)&packet_header.ts.tv_sec));
 }
 
@@ -147,7 +147,7 @@ int pnmea(char *buf,FILE *pFile) {
   } else if (ns=='S'){
     fprintf(pFile,"S:%lf ",gps_lat);
     printf("S:%lf ",gps_lat);
-    slat = gps_lat;
+    slat = gps_lon;
   }
   if (ew=='E'){
     fprintf(pFile,"- E:%lf / ",gps_lon);
@@ -181,12 +181,12 @@ void packet_process(u_char *cnt, const struct pcap_pkthdr* pkthdr, const u_char*
   struct termios oldtio, newtio;
   unsigned char buf[512];
 
-  FILE *fp;
-  char filename[100];
+  int tmp;
   char macadr[18];
   char tmpstr[3];
-  int tmp;
-
+  FILE *fp;
+  char filename[30];
+  
   // 出力ファイル
   pFile=fopen("output.txt","a");
   
@@ -244,7 +244,7 @@ void packet_process(u_char *cnt, const struct pcap_pkthdr* pkthdr, const u_char*
     }
     ptr++;
   } while(--k>0);
-  
+
   // Parse radiotap header until getting the RSSI
   do{
     next_arg_index=ieee80211_radiotap_iterator_next(&iterator);
@@ -268,9 +268,9 @@ void packet_process(u_char *cnt, const struct pcap_pkthdr* pkthdr, const u_char*
   tcsetattr(fd, TCSANOW, &oldtio); 
   close(fd);
 
-  sprintf(filename, "output/%s",macadr);
-  fp = fopen(filename,"a");
-  fprintf(fp,"%f %f %d\n",slat,slon,rssi);
+  sprintf(filename, "output/%s", macadr);
+  fp = fopen(filename, "a");
+  fprintf(fp, "%f,%f,%d\n", slon, slat, rssi);
   fclose(fp);
 
   return;
