@@ -3,10 +3,11 @@ import matplotlib.animation as animation
 from matplotlib import style
 import numpy as np
 import localization
+import pyproj
 
 def gps_to_xy(lon,lat): #convert the gpss to xy
-    epsg4612 = pyproj.proj("+init=epsg:4612")  #http://sanvarie.hatenablog.com/entry/2016/01/04/170242
-    epsg2451 = pyproj.proj("+init=epsg:2451")  #japan - zone-9 http://d.hatena.ne.jp/tmizu23/20091215/1260868350
+    epsg4612 = pyproj.Proj("+init=epsg:4612")  #http://sanvarie.hatenablog.com/entry/2016/01/04/170242
+    epsg2451 = pyproj.Proj("+init=epsg:2451")  #japan - zone-9 http://d.hatena.ne.jp/tmizu23/20091215/1260868350
     y,x = pyproj.transform(epsg4612,epsg2451,lon,lat)
     return x,y
 
@@ -34,7 +35,7 @@ def angle_between(x1,y1,x2,y2):
 def animate_latlon(i):
 
     #graph_data2 = open('test_data.txt','r').read()
-    graph_data2 = open('../RIM_PROGRAM1/output/50\:7A\:55\:0B\:A7\:83','r').read()
+    graph_data2 = open('../RIM_PROGRAM1/output/70:18:8B:80:C9:E3','r').read()
     lines2 = graph_data2.split('\n')
     allx = np.array([])
     ally = np.array([])
@@ -56,7 +57,7 @@ def animate_latlon(i):
 
     for line in lines2:
         if len(line) > 1:
-            lo, la, rssi = line.split(',')
+            la, lo, rssi = line.split(',')
             x, y = gps_to_xy(lo,la)
             allx = np.append(allx,int(float(x)))
             ally = np.append(ally,int(float(y)))
