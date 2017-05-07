@@ -4,8 +4,8 @@ from matplotlib import style
 
 def animate(i):
 
-    #graph_data = open('test_rssi.txt','r').read()
-    graph_data = open('../RIM_PROGRAM1/output/70:18:8B:80:C9:E3','r').read()
+    target = open('../target.txt','r').read()
+    graph_data = open(target.strip(),'r').read()
     lines = graph_data.split('\n')
     xs = []
     ys = []
