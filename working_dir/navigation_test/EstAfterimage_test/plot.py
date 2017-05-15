@@ -4,11 +4,22 @@ from matplotlib import style
 import numpy as np
 import localization
 import math
+import pyproj
 
-curx = 0
-cury = 0
 prex = 0
 prey = 0
+
+Estx = np.array([])
+Esty = np.array([])
+
+def gps_to_xy(lon,lat): #Convert the GPSs to xy
+    EPSG4612 = pyproj.Proj("+init=EPSG:4612")  #http://sanvarie.hatenablog.com/entry/2016/01/04/170242
+    EPSG2451 = pyproj.Proj("+init=EPSG:2451")  #Japan - zone-9 http://d.hatena.ne.jp/tmizu23/20091215/1260868350
+    y,x = pyproj.transform(EPSG4612,EPSG2451,lon,lat)
+    return x,y
+
+acx, acy = gps_to_xy(139.939094,37.525295)#67_dev2
+
 
 def distance_between(x1,y1,x2,y2):
 
@@ -33,7 +44,8 @@ def angle_between(x1,y1,x2,y2):
 
 def animate_latlon(i):
 
-    global curx,cury,prex,prey
+    global prex,prey
+    global Estx,Esty
 
     graph_data2 = open('../test_data.txt','r').read()
     lines2 = graph_data2.split('\n')
@@ -103,8 +115,12 @@ def animate_latlon(i):
     ax2.scatter(xs80,ys80, c = 'y', marker = '.', alpha = 0.1, label = '-89 ~ -80')
     ax2.scatter(xs90,ys90, c = 'y', marker = '.', alpha = 0.1, label = '-99 ~ -90')
 
-#    if est_x and est_y:
-#        ax2.scatter(est_x,est_y,c = 'b', marker = 'o', alpha = 0.5, s = 100, label = 'estimated position')
+    est_x,est_y = localization.localization(allx,ally,allr)
+    Estx = np.append(Estx,est_x)
+    Esty = np.append(Esty,est_y)
+    ax2.scatter(Estx, Esty, c = 'b', marker = 'o', alpha = 0.3, s = 100)
+    if est_x and est_y:
+        ax2.scatter(est_x,est_y,c = 'r', marker = 'o', alpha = 0.3, s = 100, label = 'estimated position')
 
     u = float(x)
     v = float(y)
@@ -116,21 +132,12 @@ def animate_latlon(i):
             i = i - 1
             if prex != allx[-1] or prey != ally[-1]:
                 break
-    '''
-    if float(x)!=curx or float(y)!=cury:
-        prex = curx
-        prey = cury
 
-    u = curx-prex
-    v = cury-prey
-
-#    a = math.sqrt(u**2+v**2)
-#    ax2.quiver(float(x),float(y),(u/a),(v/a),angles='xy',scale_units='xy',scale=1)
-    a = math.sqrt(u**2+v**2)
-    '''
     a = math.sqrt((u-prex)**2+(v-prey)**2)
 
-    ax2.arrow(prex,prey,(u-prex)/a,(v-prey)/a,head_width=0.5,head_length=1,fc='k',ec='k')
+    ax2.arrow(u,v,((u-prex)/a)*2,((v-prey)/a)*2,head_width=0.5,head_length=1,color='b')
+    ax2.arrow(float(x),float(y),est_x-u,est_y-v,head_width=0.5,head_length=1,fc='k',ec='k')
+    ax2.scatter(acx,acy,c = 'y',marker = '*',s = 200, label = 'actual position')
 
     ax2.set_xlim(30+1.692*10**5,75+1.692*10**5)
     ax2.set_ylim(9270,9370)

@@ -5,8 +5,6 @@ import numpy as np
 import localization
 import math
 
-curx = 0
-cury = 0
 prex = 0
 prey = 0
 
@@ -33,7 +31,7 @@ def angle_between(x1,y1,x2,y2):
 
 def animate_latlon(i):
 
-    global curx,cury,prex,prey
+    global prex,prey
 
     graph_data2 = open('../test_data.txt','r').read()
     lines2 = graph_data2.split('\n')
@@ -59,11 +57,7 @@ def animate_latlon(i):
     maxx = 0
     maxy = 0
 
-    '''
-    current position = allx[-1],ally[-1]
-    '''
-
-    for i,line in enumerate(lines2):
+    for line in lines2:
         if len(line) > 1:
             x, y, rssi = line.split(',')
             allx = np.append(allx,int(float(x)))
@@ -96,18 +90,21 @@ def animate_latlon(i):
             rs.append(rssi)
     ax2.clear()
 
-    ax2.scatter(xs40,ys40, c = 'r', marker = 'o', alpha = 0.5, label = '-49 ~ -40')
-    ax2.scatter(xs50,ys50, c = 'g', marker = '^', alpha = 0.4, label = '-59 ~ -50')
-    ax2.scatter(xs60,ys60, c = 'c', marker = '^', alpha = 0.3, label = '-69 ~ -60')
-    ax2.scatter(xs70,ys70, c = 'm', marker = 's', alpha = 0.2, label = '-79 ~ -70')
-    ax2.scatter(xs80,ys80, c = 'y', marker = '.', alpha = 0.1, label = '-89 ~ -80')
-    ax2.scatter(xs90,ys90, c = 'y', marker = '.', alpha = 0.1, label = '-99 ~ -90')
+    ax2.scatter(xs40-float(x),ys40-float(y), c = 'r', marker = 'o', alpha = 0.5, label = '-49 ~ -40')
+    ax2.scatter(xs50-float(x),ys50-float(y), c = 'g', marker = '^', alpha = 0.4, label = '-59 ~ -50')
+    ax2.scatter(xs60-float(x),ys60-float(y), c = 'c', marker = '^', alpha = 0.3, label = '-69 ~ -60')
+    ax2.scatter(xs70-float(x),ys70-float(y), c = 'm', marker = 's', alpha = 0.2, label = '-79 ~ -70')
+    ax2.scatter(xs80-float(x),ys80-float(y), c = 'y', marker = '.', alpha = 0.1, label = '-89 ~ -80')
+    ax2.scatter(xs90-float(x),ys90-float(y), c = 'y', marker = '.', alpha = 0.1, label = '-99 ~ -90')
 
-#    if est_x and est_y:
-#        ax2.scatter(est_x,est_y,c = 'b', marker = 'o', alpha = 0.5, s = 100, label = 'estimated position')
+    ax2.scatter(0,0,c = 'b', marker = 'o', alpha = 1)
+#    est_x,est_y = localization.localization(allx-np.min(allx),ally-np.min(ally),allr)
+    est_x,est_y = localization.localization(allx-float(x),ally-float(y),allr)
+    if est_x and est_y:
+        ax2.scatter(est_x,est_y,c = 'b', marker = 'o', alpha = 0.5, s = 100, label = 'estimated position')
 
-    u = float(x)
-    v = float(y)
+    u = 0
+    v = 0
     if allx[-1]==allx[-2] and ally[-1]==ally[-2]:
         i = -3
         while(True):
@@ -116,26 +113,14 @@ def animate_latlon(i):
             i = i - 1
             if prex != allx[-1] or prey != ally[-1]:
                 break
-    '''
-    if float(x)!=curx or float(y)!=cury:
-        prex = curx
-        prey = cury
 
-    u = curx-prex
-    v = cury-prey
+    ax2.arrow(prex-float(x),prey-float(y),0,0,head_width=2,head_length=3,fc='k',ec='k')
 
-#    a = math.sqrt(u**2+v**2)
-#    ax2.quiver(float(x),float(y),(u/a),(v/a),angles='xy',scale_units='xy',scale=1)
-    a = math.sqrt(u**2+v**2)
-    '''
-    a = math.sqrt((u-prex)**2+(v-prey)**2)
+    ax2.set_ylim(-50,50)
+    ax2.set_xlim(-50,50)
+#    ax2.scatter(x, y, c = 'k',s = 80,marker = '*', alpha = 1, label = 'current position')
 
-    ax2.arrow(prex,prey,(u-prex)/a,(v-prey)/a,head_width=0.5,head_length=1,fc='k',ec='k')
-
-    ax2.set_xlim(30+1.692*10**5,75+1.692*10**5)
-    ax2.set_ylim(9270,9370)
     ax2.legend()
-
 style.use('fivethirtyeight')
 
 fig = plt.figure()
