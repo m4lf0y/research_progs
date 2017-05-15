@@ -3,9 +3,10 @@ import matplotlib.animation as animation
 from matplotlib import style
 import numpy as np
 import localization
+import math
 
-xest = np.array([])
-yest = np.array([])
+prex = 0
+prey = 0
 
 def distance_between(x1,y1,x2,y2):
 
@@ -30,6 +31,8 @@ def angle_between(x1,y1,x2,y2):
 
 def animate_latlon(i):
 
+    global prex,prey
+
     graph_data2 = open('../test_data.txt','r').read()
     lines2 = graph_data2.split('\n')
     allx = np.array([])
@@ -47,10 +50,12 @@ def animate_latlon(i):
     ys70 = np.array([])
     ys80 = np.array([])
     ys90 = np.array([])
-    global xest
-    global yest
 
     rs =[]
+
+    maxr = -100
+    maxx = 0
+    maxy = 0
 
     for line in lines2:
         if len(line) > 1:
@@ -58,6 +63,12 @@ def animate_latlon(i):
             allx = np.append(allx,int(float(x)))
             ally = np.append(ally,int(float(y)))
             allr = np.append(allr,int(rssi))
+
+            if maxr <= int(rssi):
+                maxr = int(rssi)
+                maxx = int(float(x))
+                maxy = int(float(y))
+
             if int(int(rssi)/10)==-4:
                 xs40 = np.append(xs40,float(x))
                 ys40 = np.append(ys40,float(y))
@@ -87,13 +98,23 @@ def animate_latlon(i):
     ax2.scatter(xs90-float(x),ys90-float(y), c = 'y', marker = '.', alpha = 0.1, label = '-99 ~ -90')
 
     ax2.scatter(0,0,c = 'b', marker = 'o', alpha = 1)
-    est_x,est_y = localization.localization(allx-np.min(allx),ally-np.min(ally),allr)
-    xest = np.append(xest, est_x)
-    yest = np.append(yest, est_y)
+#    est_x,est_y = localization.localization(allx-np.min(allx),ally-np.min(ally),allr)
+    est_x,est_y = localization.localization(allx-float(x),ally-float(y),allr)
+    if est_x and est_y:
+        ax2.scatter(est_x,est_y,c = 'b', marker = 'o', alpha = 0.5, s = 100, label = 'estimated position')
 
-    print(xest)
-    
-    ax2.scatter(xest,yest,c = 'b', marker = 'o', alpha = 0.5, s = 100, label = 'estimated position')
+    u = 0
+    v = 0
+    if allx[-1]==allx[-2] and ally[-1]==ally[-2]:
+        i = -3
+        while(True):
+            prex = allx[i]
+            prey = ally[i]
+            i = i - 1
+            if prex != allx[-1] or prey != ally[-1]:
+                break
+
+    ax2.arrow(prex-float(x),prey-float(y),0,0,head_width=2,head_length=3,fc='k',ec='k')
 
     ax2.set_ylim(-50,50)
     ax2.set_xlim(-50,50)

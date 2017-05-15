@@ -26,7 +26,7 @@ def angle_between(x1,y1,x2,y2):
 
 def animate_latlon(i):
 
-    graph_data2 = open('test_data.txt','r').read()
+    graph_data2 = open('../test_data.txt','r').read()
     lines2 = graph_data2.split('\n')
     xs40 = np.array([])
     xs50 = np.array([])

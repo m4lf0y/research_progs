@@ -3,9 +3,7 @@ import matplotlib.animation as animation
 from matplotlib import style
 import numpy as np
 import localization
-
-xest = np.array([])
-yest = np.array([])
+import math
 
 def distance_between(x1,y1,x2,y2):
 
@@ -47,10 +45,12 @@ def animate_latlon(i):
     ys70 = np.array([])
     ys80 = np.array([])
     ys90 = np.array([])
-    global xest
-    global yest
 
     rs =[]
+
+    maxr = -100
+    maxx = 0
+    maxy = 0
 
     for line in lines2:
         if len(line) > 1:
@@ -58,6 +58,12 @@ def animate_latlon(i):
             allx = np.append(allx,int(float(x)))
             ally = np.append(ally,int(float(y)))
             allr = np.append(allr,int(rssi))
+
+            if maxr <= int(rssi):
+                maxr = int(rssi)
+                maxx = int(float(x))
+                maxy = int(float(y))
+
             if int(int(rssi)/10)==-4:
                 xs40 = np.append(xs40,float(x))
                 ys40 = np.append(ys40,float(y))
@@ -88,12 +94,13 @@ def animate_latlon(i):
 
     ax2.scatter(0,0,c = 'b', marker = 'o', alpha = 1)
     est_x,est_y = localization.localization(allx-np.min(allx),ally-np.min(ally),allr)
-    xest = np.append(xest, est_x)
-    yest = np.append(yest, est_y)
+    if est_x and est_y:
+        ax2.scatter(est_x,est_y,c = 'b', marker = 'o', alpha = 0.5, s = 100, label = 'estimated position')
 
-    print(xest)
-    
-    ax2.scatter(xest,yest,c = 'b', marker = 'o', alpha = 0.5, s = 100, label = 'estimated position')
+    u = maxx-float(x)
+    v = maxy-float(y)
+    a = math.sqrt(u**2+v**2)
+    ax2.quiver(0,0,5*(u/a),5*(v/a),angles='xy',scale_units='xy',scale=1)
 
     ax2.set_ylim(-50,50)
     ax2.set_xlim(-50,50)

@@ -11,9 +11,9 @@ def gps_to_xy(lon,lat): #Convert the GPSs to xy
 fr = open('../device/67_dev2_r.rim','r')
 
 # file open (write)
-if os.path.exists('test_data.txt'):
-    os.remove('test_data.txt')
-fw = open('test_data.txt','a',1)
+if os.path.exists('../test_data.txt'):
+    os.remove('../test_data.txt')
+fw = open('../test_data.txt','a',1)
 
 i=0
 for row in fr:

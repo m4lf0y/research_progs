@@ -8,12 +8,12 @@ def gps_to_xy(lon,lat): #Convert the GPSs to xy
     y,x = pyproj.transform(EPSG4612,EPSG2451,lon,lat)
     return x,y
 
-fr = open('../device/1_dev34.rim','r')
+fr = open('../device/67_dev2_r.rim','r')
 
 # file open (write)
-if os.path.exists('test_data.txt'):
-    os.remove('test_data.txt')
-fw = open('test_data.txt','a',1)
+if os.path.exists('../test_data.txt'):
+    os.remove('../test_data.txt')
+fw = open('../test_data.txt','a',1)
 
 i=0
 for row in fr:
