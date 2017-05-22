@@ -13,7 +13,9 @@
 
 int a=0;
 #define BAUDRATE B4800
-#define MODEMDEVICE "/dev/ttyUSB0"
+//#define MODEMDEVICE "/dev/ttyUSB0"
+#define MODEMDEVICE "/dev/tty.usbserial"
+
 
 /* Frame */
 struct wi_frame {
@@ -180,7 +182,7 @@ void packet_process(u_char *cnt, const struct pcap_pkthdr* pkthdr, const u_char*
   pFile=fopen("output.txt","a");
   
   /* シリアル通信を行うための設定 */
-
+  
   if((fd = open(MODEMDEVICE, O_RDWR | O_NOCTTY ))==-1){
     perror(MODEMDEVICE);
     exit(1);
@@ -203,6 +205,7 @@ void packet_process(u_char *cnt, const struct pcap_pkthdr* pkthdr, const u_char*
 
   while (1) {
     res = read(fd,buf,512);
+    printf("aaa");
     if(pnmea(buf,pFile)){
       break;
     }
