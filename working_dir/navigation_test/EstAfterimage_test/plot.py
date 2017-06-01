@@ -18,7 +18,9 @@ def gps_to_xy(lon,lat): #Convert the GPSs to xy
     y,x = pyproj.transform(EPSG4612,EPSG2451,lon,lat)
     return x,y
 
-acx, acy = gps_to_xy(139.939094,37.525295)#67_dev2
+#acx, acy = gps_to_xy(139.939094,37.525295)#67_dev2
+#acx, acy = gps_to_xy(139.938832,37.525590)#test0522
+acx, acy = gps_to_xy(139.942497,37.522496)#test0523
 
 
 def distance_between(x1,y1,x2,y2):
@@ -139,8 +141,8 @@ def animate_latlon(i):
     ax2.arrow(float(x),float(y),est_x-u,est_y-v,head_width=0.5,head_length=1,fc='k',ec='k')
     ax2.scatter(acx,acy,c = 'y',marker = '*',s = 200, label = 'actual position')
 
-    ax2.set_xlim(30+1.692*10**5,75+1.692*10**5)
-    ax2.set_ylim(9270,9370)
+    #ax2.set_xlim(30+1.692*10**5,75+1.692*10**5)
+    #ax2.set_ylim(9270,9370)
     ax2.legend()
 
 style.use('fivethirtyeight')

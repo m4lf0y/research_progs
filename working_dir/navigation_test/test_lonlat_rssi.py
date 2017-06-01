@@ -8,7 +8,8 @@ def gps_to_xy(lon,lat): #Convert the GPSs to xy
     y,x = pyproj.transform(EPSG4612,EPSG2451,lon,lat)
     return x,y
 
-fr = open('device/67_dev2.rim','r')
+fr = open('device/test0523','r')
+#fr = open('device/67_dev2.rim','r')
 #fr = open('device/1_dev16_r.rim','r')
 
 # file open (write)
@@ -22,7 +23,7 @@ for row in fr:
         continue
     i+=1
 
-    time.sleep(0.1)
+    time.sleep(1)
 
     l = row.strip().split(" ")
     
