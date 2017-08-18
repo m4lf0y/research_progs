@@ -18,9 +18,9 @@ def gps_to_xy(lon,lat): #Convert the GPSs to xy
     y,x = pyproj.transform(EPSG4612,EPSG2451,lon,lat)
     return x,y
 
-#acx, acy = gps_to_xy(139.939094,37.525295)#67_dev2
+acx, acy = gps_to_xy(139.939094,37.525295)#67_dev2
 #acx, acy = gps_to_xy(139.938832,37.525590)#test0522
-acx, acy = gps_to_xy(139.942497,37.522496)#test0523
+#acx, acy = gps_to_xy(139.942497,37.522496)#test0523
 
 
 def distance_between(x1,y1,x2,y2):
@@ -110,19 +110,26 @@ def animate_latlon(i):
             rs.append(rssi)
     ax2.clear()
 
-    ax2.scatter(xs40,ys40, c = 'r', marker = 'o', alpha = 0.5, label = '-49 ~ -40')
-    ax2.scatter(xs50,ys50, c = 'g', marker = '^', alpha = 0.4, label = '-59 ~ -50')
-    ax2.scatter(xs60,ys60, c = 'c', marker = '^', alpha = 0.3, label = '-69 ~ -60')
-    ax2.scatter(xs70,ys70, c = 'm', marker = 's', alpha = 0.2, label = '-79 ~ -70')
-    ax2.scatter(xs80,ys80, c = 'y', marker = '.', alpha = 0.1, label = '-89 ~ -80')
-    ax2.scatter(xs90,ys90, c = 'y', marker = '.', alpha = 0.1, label = '-99 ~ -90')
+    #ax2.scatter(xs40,ys40, c = 'r', marker = 'o', alpha = 0.5, label = '-49 ~ -40')
+    #ax2.scatter(xs50,ys50, c = 'g', marker = '^', alpha = 0.4, label = '-59 ~ -50')
+    #ax2.scatter(xs60,ys60, c = 'c', marker = '^', alpha = 0.3, label = '-69 ~ -60')
+    #ax2.scatter(xs70,ys70, c = 'm', marker = 's', alpha = 0.2, label = '-79 ~ -70')
+    #ax2.scatter(xs80,ys80, c = 'y', marker = '.', alpha = 0.1, label = '-89 ~ -80')
+    #ax2.scatter(xs90,ys90, c = 'y', marker = '.', alpha = 0.1, label = '-99 ~ -90')
+
+    ax2.scatter(xs40,ys40, c = 'r', alpha = 0.5, label = '-49 ~ -40')
+    ax2.scatter(xs50,ys50, c = 'g', alpha = 0.4, label = '-59 ~ -50')
+    ax2.scatter(xs60,ys60, c = 'c', alpha = 0.3, label = '-69 ~ -60')
+    ax2.scatter(xs70,ys70, c = 'm', alpha = 0.3, label = '-79 ~ -70')
+    ax2.scatter(xs80,ys80, c = 'y', alpha = 0.3, label = '-89 ~ -80')
+    ax2.scatter(xs90,ys90, c = 'y', alpha = 0.3, label = '-99 ~ -90')
 
     est_x,est_y = localization.localization(allx,ally,allr)
     Estx = np.append(Estx,est_x)
     Esty = np.append(Esty,est_y)
-    ax2.scatter(Estx, Esty, c = 'b', marker = 'o', alpha = 0.3, s = 100)
+    ax2.scatter(Estx, Esty, c = 'b', marker = 'o', alpha = 0.3, s = 300)
     if est_x and est_y:
-        ax2.scatter(est_x,est_y,c = 'r', marker = 'o', alpha = 0.3, s = 100, label = 'estimated position')
+        ax2.scatter(est_x,est_y,c = 'b', marker = 'o', alpha = 0.3, s = 300, label = 'estimated position')
 
     u = float(x)
     v = float(y)
@@ -139,15 +146,17 @@ def animate_latlon(i):
 
     ax2.arrow(u,v,((u-prex)/a)*2,((v-prey)/a)*2,head_width=0.5,head_length=1,color='b')
     ax2.arrow(float(x),float(y),est_x-u,est_y-v,head_width=0.5,head_length=1,fc='k',ec='k')
-    ax2.scatter(acx,acy,c = 'y',marker = '*',s = 200, label = 'actual position')
+    ax2.scatter(acx,acy,c = 'r',marker = '*',s = 300, label = 'actual position')
 
-    #ax2.set_xlim(30+1.692*10**5,75+1.692*10**5)
-    #ax2.set_ylim(9270,9370)
+    ax2.patch.set_facecolor('white')
+    ax2.set_xlim(40+1.692*10**5,75+1.692*10**5)
+    ax2.set_ylim(9320,9355)
     ax2.legend()
 
 style.use('fivethirtyeight')
 
 fig = plt.figure()
+fig.patch.set_facecolor('white')
 
 ax2 = fig.add_subplot(1,1,1)
 ani= animation.FuncAnimation(fig, animate_latlon, interval=1000)
